@@ -1,0 +1,11 @@
+{% extends 'workout_web_app/base.html' %}
+
+{% block content %}
+    <h2>sign up</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">sign up</button>
+    </form>
+{% endblock %}
+

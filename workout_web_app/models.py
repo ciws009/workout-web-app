@@ -2,9 +2,8 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
-# Create your models here.
-
 class WorkoutMenu(models.Model):
+    date_of_activity = models.DateTimeField(default=timezone.now)
     workout_name = models.CharField(max_length=200)
     remarks_column = models.TextField()
     reps = models.IntegerField()

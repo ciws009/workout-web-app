@@ -1,0 +1,13 @@
+{% extends "workout_web_app/base.html" %}
+{% block content %}
+<div class="container">
+  <p>{{ user.username }}</p>
+  <h1>Top Page!!</h1>
+  <form action="/your-name/" method="post">
+    <label for="your_name">Your name</label>
+    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+    <input type="submit" value="OK">
+  </form>
+  <a href="{% url 'logout' %}">Logout</a>
+</div>
+{% endblock %}
